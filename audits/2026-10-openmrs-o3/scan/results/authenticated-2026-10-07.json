@@ -1,0 +1,706 @@
+{
+  "date": "2026-10-07T20:12:25.990Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "pages": [
+    {
+      "name": "P2 Location picker",
+      "url": "http://127.0.0.1:8091/openmrs/spa/login/location?update=true",
+      "finalUrl": "http://127.0.0.1:8091/openmrs/spa/login/location?update=true",
+      "title": "OpenMRS",
+      "axe": "4.13.0",
+      "violations": [
+        {
+          "rule": "button-name",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".-esm-help-menu__help-styles__helpMenuButton___TPPNC"
+          ],
+          "help": "Buttons must have discernible text"
+        }
+      ],
+      "needsReview": []
+    },
+    {
+      "name": "P3 Home (service queues)",
+      "url": "http://127.0.0.1:8091/openmrs/spa/home/service-queues",
+      "finalUrl": "http://127.0.0.1:8091/openmrs/spa/home/service-queues",
+      "title": "OpenMRS",
+      "axe": "4.13.0",
+      "violations": [
+        {
+          "rule": "button-name",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".-esm-help-menu__help-styles__helpMenuButton___TPPNC"
+          ],
+          "help": "Buttons must have discernible text"
+        },
+        {
+          "rule": "list",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".cds--switcher"
+          ],
+          "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+        },
+        {
+          "rule": "listitem",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 4,
+          "examples": [
+            "div[data-extension-id=\"default-user-panel\"] > .cds--switcher__item",
+            ".-esm-primary-navigation__change-language-link__panelItemContainer___HYYBs",
+            ".-esm-login__change-password__panelItemContainer___rsOxJ"
+          ],
+          "help": "<li> elements must be contained in a <ul> or <ol>"
+        }
+      ],
+      "needsReview": [
+        {
+          "rule": "aria-prohibited-attr",
+          "impact": "serious",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 6,
+          "examples": [
+            ".-esm-primary-navigation__user-menu-panel__headerPanel___2HerO",
+            "a[aria-label=\"User\"]",
+            "a[aria-label=\"Change language\"]"
+          ],
+          "help": "Elements must only use permitted ARIA attributes"
+        },
+        {
+          "rule": "aria-valid-attr-value",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 7,
+          "examples": [
+            ".-esm-implementer-tools__implementer-tools-styles__toolStyles___g9u4a",
+            ".-esm-patient-registration__add-patient-link__slotStyles___ejEWZ",
+            "button[data-tutorial-target=\"user-settings\"]"
+          ],
+          "help": "ARIA attributes must conform to valid values"
+        },
+        {
+          "rule": "color-contrast",
+          "impact": "serious",
+          "criteria": [
+            "wcag143"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".-esm-login__change-location-link__currentLocationText___EnXTh"
+          ],
+          "help": "Elements must meet minimum color contrast ratio thresholds"
+        },
+        {
+          "rule": "th-has-data-cells",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 1,
+          "examples": [
+            "table"
+          ],
+          "help": "Table headers in a data table must refer to data cells"
+        }
+      ]
+    },
+    {
+      "name": "P4 Patient search",
+      "url": "http://127.0.0.1:8091/openmrs/spa/search?query=Johnson",
+      "finalUrl": "http://127.0.0.1:8091/openmrs/spa/search?query=Johnson",
+      "title": "OpenMRS",
+      "axe": "4.13.0",
+      "violations": [
+        {
+          "rule": "aria-roles",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".-esm-patient-search__refine-search__refineSearchContainer___zPps2"
+          ],
+          "help": "ARIA roles used must conform to valid values"
+        },
+        {
+          "rule": "button-name",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".-esm-help-menu__help-styles__helpMenuButton___TPPNC"
+          ],
+          "help": "Buttons must have discernible text"
+        },
+        {
+          "rule": "list",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".cds--switcher"
+          ],
+          "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+        },
+        {
+          "rule": "listitem",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 4,
+          "examples": [
+            "div[data-extension-id=\"default-user-panel\"] > .cds--switcher__item",
+            ".-esm-primary-navigation__change-language-link__panelItemContainer___HYYBs",
+            ".-esm-login__change-password__panelItemContainer___rsOxJ"
+          ],
+          "help": "<li> elements must be contained in a <ul> or <ol>"
+        }
+      ],
+      "needsReview": [
+        {
+          "rule": "aria-prohibited-attr",
+          "impact": "serious",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 6,
+          "examples": [
+            ".-esm-primary-navigation__user-menu-panel__headerPanel___2HerO",
+            "a[aria-label=\"User\"]",
+            "a[aria-label=\"Change language\"]"
+          ],
+          "help": "Elements must only use permitted ARIA attributes"
+        },
+        {
+          "rule": "aria-valid-attr-value",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 5,
+          "examples": [
+            ".-esm-implementer-tools__implementer-tools-styles__toolStyles___g9u4a",
+            ".-esm-patient-registration__add-patient-link__slotStyles___ejEWZ",
+            "button[data-tutorial-target=\"user-settings\"]"
+          ],
+          "help": "ARIA attributes must conform to valid values"
+        },
+        {
+          "rule": "color-contrast",
+          "impact": "serious",
+          "criteria": [
+            "wcag143"
+          ],
+          "nodes": 3,
+          "examples": [
+            ".-esm-login__change-location-link__currentLocationText___EnXTh",
+            ".DY4P\\+AXjnOF8-d5JPdN43A\\=\\=",
+            "span[title=\"Active Visit\"]"
+          ],
+          "help": "Elements must meet minimum color contrast ratio thresholds"
+        }
+      ]
+    },
+    {
+      "name": "P5 Patient registration",
+      "url": "http://127.0.0.1:8091/openmrs/spa/patient-registration",
+      "finalUrl": "http://127.0.0.1:8091/openmrs/spa/patient-registration",
+      "title": "OpenMRS",
+      "axe": "4.13.0",
+      "violations": [
+        {
+          "rule": "button-name",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".-esm-help-menu__help-styles__helpMenuButton___TPPNC"
+          ],
+          "help": "Buttons must have discernible text"
+        },
+        {
+          "rule": "color-contrast",
+          "impact": "serious",
+          "criteria": [
+            "wcag143"
+          ],
+          "nodes": 3,
+          "examples": [
+            "#react-aria3883633954-\\:r1b\\:",
+            "#react-aria3883633954-\\:r1f\\:",
+            "#react-aria3883633954-\\:r1j\\:"
+          ],
+          "help": "Elements must meet minimum color contrast ratio thresholds"
+        },
+        {
+          "rule": "list",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 1,
+          "examples": [
+            "ul"
+          ],
+          "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+        },
+        {
+          "rule": "listitem",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 4,
+          "examples": [
+            "div[data-extension-id=\"default-user-panel\"] > .cds--switcher__item",
+            ".-esm-primary-navigation__change-language-link__panelItemContainer___HYYBs",
+            ".-esm-login__change-password__panelItemContainer___rsOxJ"
+          ],
+          "help": "<li> elements must be contained in a <ul> or <ol>"
+        }
+      ],
+      "needsReview": [
+        {
+          "rule": "aria-prohibited-attr",
+          "impact": "serious",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 6,
+          "examples": [
+            ".-esm-primary-navigation__user-menu-panel__headerPanel___2HerO",
+            "a[aria-label=\"User\"]",
+            "a[aria-label=\"Change language\"]"
+          ],
+          "help": "Elements must only use permitted ARIA attributes"
+        },
+        {
+          "rule": "aria-valid-attr-value",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 4,
+          "examples": [
+            ".-esm-implementer-tools__implementer-tools-styles__toolStyles___g9u4a",
+            ".-esm-patient-registration__add-patient-link__slotStyles___ejEWZ",
+            "button[data-tutorial-target=\"user-settings\"]"
+          ],
+          "help": "ARIA attributes must conform to valid values"
+        },
+        {
+          "rule": "color-contrast",
+          "impact": "serious",
+          "criteria": [
+            "wcag143"
+          ],
+          "nodes": 5,
+          "examples": [
+            ".-esm-login__change-location-link__currentLocationText___EnXTh",
+            "#contact > h3",
+            "#contact > .-esm-patient-registration__section__label01___SB4dO"
+          ],
+          "help": "Elements must meet minimum color contrast ratio thresholds"
+        }
+      ]
+    },
+    {
+      "name": "P6 Patient chart — summary",
+      "url": "http://127.0.0.1:8091/openmrs/spa/patient/72a448e2-bbd2-42d2-8ee4-fab961d8f695/chart/Patient%20Summary",
+      "finalUrl": "http://127.0.0.1:8091/openmrs/spa/patient/72a448e2-bbd2-42d2-8ee4-fab961d8f695/chart/Patient%20Summary",
+      "title": "OpenMRS",
+      "axe": "4.13.0",
+      "violations": [
+        {
+          "rule": "button-name",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".-esm-help-menu__help-styles__helpMenuButton___TPPNC"
+          ],
+          "help": "Buttons must have discernible text"
+        },
+        {
+          "rule": "link-in-text-block",
+          "impact": "serious",
+          "criteria": [
+            "wcag141"
+          ],
+          "nodes": 3,
+          "examples": [
+            "div:nth-child(2) > .-esm-patient-chart__pagination__desktop___tH3-d > div:nth-child(1) > .-esm-patient-chart__pagination__configurableLink___31tMZ",
+            ".-esm-patient-vitals__biometrics-base__widgetCard___2dWUk > .-esm-patient-chart__pagination__desktop___tH3-d > div:nth-child(1) > .-esm-patient-chart__pagination__configurableLink___31tMZ",
+            ".-esm-patient-conditions__conditions-overview__widgetCard___wxX0y > .-esm-patient-chart__pagination__desktop___tH3-d > div:nth-child(1) > .-esm-patient-chart__pagination__configurableLink___31tMZ"
+          ],
+          "help": "Links must be distinguishable without relying on color"
+        },
+        {
+          "rule": "list",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".cds--switcher"
+          ],
+          "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+        },
+        {
+          "rule": "listitem",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 4,
+          "examples": [
+            "div[data-extension-id=\"default-user-panel\"] > .cds--switcher__item",
+            ".-esm-primary-navigation__change-language-link__panelItemContainer___HYYBs",
+            ".-esm-login__change-password__panelItemContainer___rsOxJ"
+          ],
+          "help": "<li> elements must be contained in a <ul> or <ol>"
+        },
+        {
+          "rule": "nested-interactive",
+          "impact": "serious",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".-esm-patient-vitals__vitals-header__vitalsHeader___nN7c6"
+          ],
+          "help": "Interactive controls must not be nested"
+        },
+        {
+          "rule": "target-size",
+          "impact": "serious",
+          "criteria": [
+            "wcag258"
+          ],
+          "nodes": 2,
+          "examples": [
+            ".-esm-patient-vitals__vitals-header__link___Ap0jJ",
+            ".-esm-patient-vitals__vitals-header__referenceRangeButton___zacqk"
+          ],
+          "help": "All touch targets must be 24px large, or leave sufficient space"
+        }
+      ],
+      "needsReview": [
+        {
+          "rule": "aria-prohibited-attr",
+          "impact": "serious",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 15,
+          "examples": [
+            ".-esm-primary-navigation__user-menu-panel__headerPanel___2HerO",
+            "a[aria-label=\"User\"]",
+            "a[aria-label=\"Change language\"]"
+          ],
+          "help": "Elements must only use permitted ARIA attributes"
+        },
+        {
+          "rule": "aria-valid-attr-value",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 6,
+          "examples": [
+            ".-esm-implementer-tools__implementer-tools-styles__toolStyles___g9u4a",
+            ".-esm-patient-registration__add-patient-link__slotStyles___ejEWZ",
+            "button[data-tutorial-target=\"user-settings\"]"
+          ],
+          "help": "ARIA attributes must conform to valid values"
+        },
+        {
+          "rule": "color-contrast",
+          "impact": "serious",
+          "criteria": [
+            "wcag143"
+          ],
+          "nodes": 33,
+          "examples": [
+            ".-esm-login__change-location-link__currentLocationText___EnXTh",
+            ".DY4P\\+AXjnOF8-d5JPdN43A\\=\\=",
+            "span[title=\"Active Visit\"]"
+          ],
+          "help": "Elements must meet minimum color contrast ratio thresholds"
+        }
+      ]
+    },
+    {
+      "name": "P7 Patient chart — vitals form (side panel)",
+      "url": "http://127.0.0.1:8091/openmrs/spa/patient/72a448e2-bbd2-42d2-8ee4-fab961d8f695/chart/Vitals%20%26%20Biometrics",
+      "finalUrl": "http://127.0.0.1:8091/openmrs/spa/patient/72a448e2-bbd2-42d2-8ee4-fab961d8f695/chart/Vitals%20%26%20Biometrics",
+      "title": "OpenMRS",
+      "axe": "4.13.0",
+      "violations": [
+        {
+          "rule": "button-name",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".-esm-help-menu__help-styles__helpMenuButton___TPPNC"
+          ],
+          "help": "Buttons must have discernible text"
+        },
+        {
+          "rule": "list",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".cds--switcher"
+          ],
+          "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+        },
+        {
+          "rule": "listitem",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 4,
+          "examples": [
+            "div[data-extension-id=\"default-user-panel\"] > .cds--switcher__item",
+            ".-esm-primary-navigation__change-language-link__panelItemContainer___HYYBs",
+            ".-esm-login__change-password__panelItemContainer___rsOxJ"
+          ],
+          "help": "<li> elements must be contained in a <ul> or <ol>"
+        },
+        {
+          "rule": "nested-interactive",
+          "impact": "serious",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".-esm-patient-vitals__vitals-header__vitalsHeader___nN7c6"
+          ],
+          "help": "Interactive controls must not be nested"
+        },
+        {
+          "rule": "target-size",
+          "impact": "serious",
+          "criteria": [
+            "wcag258"
+          ],
+          "nodes": 2,
+          "examples": [
+            ".-esm-patient-vitals__vitals-header__link___Ap0jJ",
+            ".-esm-patient-vitals__vitals-header__referenceRangeButton___zacqk"
+          ],
+          "help": "All touch targets must be 24px large, or leave sufficient space"
+        }
+      ],
+      "needsReview": [
+        {
+          "rule": "aria-prohibited-attr",
+          "impact": "serious",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 15,
+          "examples": [
+            ".-esm-primary-navigation__user-menu-panel__headerPanel___2HerO",
+            "a[aria-label=\"User\"]",
+            "a[aria-label=\"Change language\"]"
+          ],
+          "help": "Elements must only use permitted ARIA attributes"
+        },
+        {
+          "rule": "aria-valid-attr-value",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 5,
+          "examples": [
+            ".-esm-implementer-tools__implementer-tools-styles__toolStyles___g9u4a",
+            ".-esm-patient-registration__add-patient-link__slotStyles___ejEWZ",
+            "button[data-tutorial-target=\"user-settings\"]"
+          ],
+          "help": "ARIA attributes must conform to valid values"
+        },
+        {
+          "rule": "color-contrast",
+          "impact": "serious",
+          "criteria": [
+            "wcag143"
+          ],
+          "nodes": 32,
+          "examples": [
+            ".-esm-login__change-location-link__currentLocationText___EnXTh",
+            ".DY4P\\+AXjnOF8-d5JPdN43A\\=\\=",
+            "span[title=\"Active Visit\"]"
+          ],
+          "help": "Elements must meet minimum color contrast ratio thresholds"
+        }
+      ]
+    },
+    {
+      "name": "P8 Appointments",
+      "url": "http://127.0.0.1:8091/openmrs/spa/home/appointments",
+      "finalUrl": "http://127.0.0.1:8091/openmrs/spa/home/appointments",
+      "title": "OpenMRS",
+      "axe": "4.13.0",
+      "violations": [
+        {
+          "rule": "aria-hidden-focus",
+          "impact": "serious",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".cds--batch-actions"
+          ],
+          "help": "ARIA hidden element must not be focusable or contain focusable elements"
+        },
+        {
+          "rule": "button-name",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 3,
+          "examples": [
+            ".-esm-help-menu__help-styles__helpMenuButton___TPPNC",
+            "#downshift-\\:r1a\\:-toggle-button",
+            "#downshift-\\:r1k\\:-toggle-button"
+          ],
+          "help": "Buttons must have discernible text"
+        },
+        {
+          "rule": "list",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".cds--switcher"
+          ],
+          "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+        },
+        {
+          "rule": "listitem",
+          "impact": "serious",
+          "criteria": [
+            "wcag131"
+          ],
+          "nodes": 4,
+          "examples": [
+            "div[data-extension-id=\"default-user-panel\"] > .cds--switcher__item",
+            ".-esm-primary-navigation__change-language-link__panelItemContainer___HYYBs",
+            ".-esm-login__change-password__panelItemContainer___rsOxJ"
+          ],
+          "help": "<li> elements must be contained in a <ul> or <ol>"
+        },
+        {
+          "rule": "target-size",
+          "impact": "serious",
+          "criteria": [
+            "wcag258"
+          ],
+          "nodes": 2,
+          "examples": [
+            "#react-aria5852430086-\\:rs\\:",
+            "#react-aria5852430086-\\:r10\\:"
+          ],
+          "help": "All touch targets must be 24px large, or leave sufficient space"
+        }
+      ],
+      "needsReview": [
+        {
+          "rule": "aria-prohibited-attr",
+          "impact": "serious",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 6,
+          "examples": [
+            ".-esm-primary-navigation__user-menu-panel__headerPanel___2HerO",
+            "a[aria-label=\"User\"]",
+            "a[aria-label=\"Change language\"]"
+          ],
+          "help": "Elements must only use permitted ARIA attributes"
+        },
+        {
+          "rule": "aria-valid-attr-value",
+          "impact": "critical",
+          "criteria": [
+            "wcag412"
+          ],
+          "nodes": 6,
+          "examples": [
+            ".-esm-implementer-tools__implementer-tools-styles__toolStyles___g9u4a",
+            ".-esm-patient-registration__add-patient-link__slotStyles___ejEWZ",
+            "button[data-tutorial-target=\"user-settings\"]"
+          ],
+          "help": "ARIA attributes must conform to valid values"
+        },
+        {
+          "rule": "color-contrast",
+          "impact": "serious",
+          "criteria": [
+            "wcag143"
+          ],
+          "nodes": 2,
+          "examples": [
+            ".-esm-login__change-location-link__currentLocationText___EnXTh",
+            "#cds-pagination-select-id-\\:r2b\\:-right"
+          ],
+          "help": "Elements must meet minimum color contrast ratio thresholds"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-07T20:00:24.512Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "pages": [
+    {
+      "name": "P1 Login",
+      "url": "http://127.0.0.1:8091/openmrs/spa/login",
+      "finalUrl": "http://127.0.0.1:8091/openmrs/spa/login",
+      "title": "OpenMRS",
+      "axe": "4.13.0",
+      "violations": [],
+      "needsReview": [
+        {
+          "rule": "bypass",
+          "impact": "serious",
+          "criteria": [
+            "wcag241"
+          ],
+          "nodes": 1,
+          "examples": [
+            "html"
+          ],
+          "help": "Page must have means to bypass repeated blocks"
+        }
+      ]
+    }
+  ]
+}
