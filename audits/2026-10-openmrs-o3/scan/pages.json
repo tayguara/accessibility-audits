@@ -1,0 +1,38 @@
+[
+  {
+    "name": "P2 Location picker",
+    "url": "http://127.0.0.1:8091/openmrs/spa/login/location?update=true",
+    "waitFor": "input[type=radio]"
+  },
+  {
+    "name": "P3 Home (service queues)",
+    "url": "http://127.0.0.1:8091/openmrs/spa/home/service-queues",
+    "waitFor": "table"
+  },
+  {
+    "name": "P4 Patient search",
+    "url": "http://127.0.0.1:8091/openmrs/spa/search?query=Johnson",
+    "waitFor": "text=Joshua Johnson"
+  },
+  {
+    "name": "P5 Patient registration",
+    "url": "http://127.0.0.1:8091/openmrs/spa/patient-registration",
+    "waitFor": "form"
+  },
+  {
+    "name": "P6 Patient chart — summary",
+    "url": "http://127.0.0.1:8091/openmrs/spa/patient/72a448e2-bbd2-42d2-8ee4-fab961d8f695/chart/Patient%20Summary",
+    "waitFor": "text=Vitals"
+  },
+  {
+    "name": "P7 Patient chart — vitals form (side panel)",
+    "url": "http://127.0.0.1:8091/openmrs/spa/patient/72a448e2-bbd2-42d2-8ee4-fab961d8f695/chart/Vitals%20%26%20Biometrics",
+    "waitFor": "text=Record vitals",
+    "click": "role=button[name=\"Add\" s]"
+  },
+  {
+    "name": "P8 Appointments",
+    "url": "http://127.0.0.1:8091/openmrs/spa/home/appointments",
+    "waitFor": "main"
+  }
+]

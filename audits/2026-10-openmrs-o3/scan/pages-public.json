@@ -1,0 +1,7 @@
+[
+  {
+    "name": "P1 Login",
+    "url": "http://127.0.0.1:8091/openmrs/spa/login",
+    "waitFor": "input:visible"
+  }
+]
