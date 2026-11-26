@@ -2,7 +2,7 @@
 
 | File | Content |
 | --- | --- |
-| [report.md](report.md) · [report.pdf](report.pdf) | Full audit report: scope, method, 18 findings with evidence and fixes, passed checks, roadmap, limitations |
+| [report.md](report.md) · [report.pdf](report.pdf) | Full audit report: scope, method, 18 findings with evidence and fixes, passed checks, roadmap, limitations. M6 and M7 were corrected in the Markdown on 26 Nov 2026; the PDFs keep the October text |
 | [acr.md](acr.md) · [acr.pdf](acr.pdf) | Accessibility Conformance Report in the ITI VPAT® 2.5 (WCAG edition) format |
 | [source-verification.md](source-verification.md) | Each finding checked against the current OpenMRS source code, with permalinks |
 | [issue-drafts.md](issue-drafts.md) | Ready-to-file issue texts for the OpenMRS project, one per root cause |

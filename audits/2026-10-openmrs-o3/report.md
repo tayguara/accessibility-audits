@@ -30,7 +30,8 @@ lost or hidden:
 
 Two other findings have high impact for screen reader users: the patient search does not
 announce how many results it found (M3), and every screen has the same page title,
-"OpenMRS" (M8). At 320 px wide, the patient registration form cannot be used (M7).
+"OpenMRS" (M8). At 320 px wide, the patient registration form can only be filled in by scrolling in two
+directions, with its scrollbar hidden (M7).
 
 **Good news for remediation:** two failures come from global components and appear on
 every screen (A2, and A1, which is already fixed in the current source), and most focus problems share one root cause. A consistent
@@ -184,10 +185,10 @@ silently wrong date of birth is a data-quality risk, which is why this is rated 
 
 At 200% zoom the chart switches to its tablet layout: the left menu becomes a hamburger
 menu and the chart actions become a toolbar fixed to the bottom of the screen. Moving
-forward with Tab, the controls of the Vitals card (table view toggle, "Add", and the
-following ones) receive focus behind that toolbar: first partly, then completely hidden.
-The page does not scroll, because for the browser the element is already inside the
-viewport. Without zoom the same path passes, because the bottom toolbar does not exist in
+forward with Tab through the Vitals card, controls receive focus behind that toolbar:
+first partly, then completely hidden. The browser scrolls a focused control only until it
+is inside the viewport, and at the bottom edge of the viewport it sits under the toolbar.
+Without zoom the same path passes, because the bottom toolbar does not exist in
 the desktop layout. Zoom users often have low vision, the group that depends most on
 seeing the focus.
 
@@ -197,19 +198,38 @@ seeing the focus.
 *Fix:* set `scroll-padding-bottom` (and `scroll-padding-top`) on the scroll container to the
 height of the fixed bars, so the browser scrolls focused elements clear of them.
 
-#### M7 — Content is cut off at 320 px wide; registration cannot be completed
+*Corrected on 26 Nov 2026.* The first version named the table view toggle and "Add" as the
+controls that end up completely hidden. That was seen in the manual pass, with browser zoom in
+Firefox and Chrome; the screenshots above show both partly covered. The
+[regression test](regression/) emulates 200% zoom in Chromium (a 640x400 viewport at device
+scale factor 2). There, both controls end up fully visible once the smooth scroll settles, and
+the control that ends up completely hidden is a row "Options" button of the vitals table (top
+352, bottom 400, under a toolbar from about 335 to 400). Which control ends up hidden depends
+on how the zoom is produced; that a focused control ends up entirely hidden does not.
+
+#### M7 — At 320 px wide, content is cut off or needs two-way scrolling
 **1.4.10 Reflow (AA) · P5, P6 at 320 px · Severity: High**
 
-At 320 CSS pixels (equivalent to 1280 px at 400% zoom) there is no horizontal scrollbar,
-but content that does not fit is **clipped** with no way to reach it:
+At 320 CSS pixels (equivalent to 1280 px at 400% zoom) the page itself has no horizontal
+scrollbar. Content that does not fit is either **clipped** or placed in a container that
+scrolls in two directions with no visible scrollbar:
 
 - **Registration:** the two-column layout does not stack. The "Jump to" menu and the
   action buttons take two thirds of the width; the form is squeezed and cut (labels cut in
   half, the "No" button and the inputs cut, the date field unreadable, the help button over
-  "Identifiers"). The form cannot be completed at this width.
+  "Identifiers"). The form sits in a container that scrolls sideways as well as down
+  (`scrollWidth` 531 against a `clientWidth` of 320, `scrollHeight` 2148 against 208), and
+  its scrollbar is hidden with `scrollbar-width: none`. The rest of each row can be reached
+  with Tab, which scrolls the container, or with Shift+wheel or a sideways swipe, but nothing
+  on screen shows that it is there. Filling in a form, which is linear content, by scrolling
+  in two directions fails 1.4.10.
 - **Chart:** the top bar icons, "Show more", "Sticky note", "Record vitals", the right
   column of the vitals summary (SpO2, BMI) and "Patient lists" in the bottom toolbar are
-  cut; in the summary, values overlap ("mmHg" over "81 beats/min").
+  cut; in the summary, values overlap ("mmHg" over "81 beats/min"). The widgets sit in a
+  container that also scrolls sideways (`scrollWidth` 755 and 828 in two runs, against a
+  `clientWidth` of 320).
+- **Header (both screens):** "Implementer Tools", "Add patient", "My Account" and "App
+  Menu" are beyond the 320 px edge, in a bar that does not scroll.
 
 Data tables with their own horizontal scroll would be an allowed exception; these are not
 tables.
@@ -221,6 +241,13 @@ tables.
 patient header and action rows wrap; make the vitals summary a single column below about
 480 px; move overflow icons from the top bar into the menu; reserve space for the help
 button above the bottom toolbar.
+
+*Corrected on 26 Nov 2026.* The first version said the content was clipped "with no way to
+reach it" and that the registration form could not be completed. The
+[regression tests](regression/) showed that the form container scrolls sideways; a follow-up
+check found its scrollbar hidden by CSS and confirmed that Tab and Shift+wheel reach the
+clipped fields. The finding stands: two-dimensional scrolling for a form, with no visible
+scrollbar, and header and toolbar controls cut off at 320 px.
 
 #### M8 — Every screen has the same page title
 **2.4.2 Page Titled (A) · All screens (P1–P8) · Severity: Medium**

@@ -20,7 +20,7 @@ export const findings: Record<FindingId, Finding> = {
   },
   M7: {
     sc: '1.4.10',
-    anchor: 'm7--content-is-cut-off-at-320-px-wide-registration-cannot-be-completed',
+    anchor: 'm7--at-320-px-wide-content-is-cut-off-or-needs-two-way-scrolling',
   },
   M8: { sc: '2.4.2', anchor: 'm8--every-screen-has-the-same-page-title' },
 };

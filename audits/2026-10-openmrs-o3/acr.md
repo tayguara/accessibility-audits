@@ -92,7 +92,7 @@ Information Technology Industry Council (ITI).
 | 1.4.3 Contrast (Minimum) | Partially Supports | Most text passes automated checks. Fails: date placeholders in the registration form at 1.72:1 (A4). 76 items over coloured backgrounds need manual review. |
 | 1.4.4 Resize Text | Supports | At 200% zoom, registration, search and chart reflow without loss of content or functionality. |
 | 1.4.5 Images of Text | Not Evaluated |  |
-| 1.4.10 Reflow | Does Not Support | At 320 px wide, content is clipped without a way to reach it; the registration form cannot be completed (M7). |
+| 1.4.10 Reflow | Does Not Support | At 320 px wide, header and toolbar controls are clipped, and the registration form and chart widgets need scrolling in two directions inside a container whose scrollbar is hidden (M7). |
 | 1.4.11 Non-text Contrast | Not Evaluated |  |
 | 1.4.12 Text Spacing | Not Evaluated |  |
 | 1.4.13 Content on Hover or Focus | Not Evaluated |  |
