@@ -1,0 +1,31 @@
+{
+  "name": "openmrs-o3-regression",
+  "version": "1.0.0",
+  "description": "Playwright regression tests for the manual WCAG findings (M1, M3, M6, M7, M8) of the OpenMRS O3 3.7.1 audit.",
+  "private": true,
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:unit": "playwright test --project=unit",
+    "test:show-failures": "SHOW_KNOWN_FAILURES=1 playwright test --project=e2e",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "format:check": "prettier --check .",
+    "check": "npm run lint && npm run typecheck && npm run format:check"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.63.0",
+    "@types/node": "22.20.5",
+    "eslint": "10.13.0",
+    "eslint-plugin-playwright": "2.12.1",
+    "prettier": "3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2"
+  }
+}

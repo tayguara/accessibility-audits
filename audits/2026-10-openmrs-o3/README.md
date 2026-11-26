@@ -7,6 +7,7 @@
 | [source-verification.md](source-verification.md) | Each finding checked against the current OpenMRS source code, with permalinks |
 | [issue-drafts.md](issue-drafts.md) | Ready-to-file issue texts for the OpenMRS project, one per root cause |
 | [evidence/](evidence/) | Screenshots supporting the manual findings |
+| [regression/](regression/) | Playwright regression tests for the manual findings M1, M3, M6, M7 and M8, each marked as an expected failure until the bug is fixed |
 | [scan/](scan/) | Docker Compose for the pinned 3.7.1 instance, page lists and raw axe-core results |
 
 Independent assessment, not issued or endorsed by the OpenMRS project.

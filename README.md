@@ -22,6 +22,10 @@ authenticated pages (saved session) and states that need a click first (side pan
 Automated scanning catches only part of the issues, so every report combines it with manual
 testing.
 
+[`audits/2026-10-openmrs-o3/regression`](audits/2026-10-openmrs-o3/regression/) holds plain
+Playwright tests for five of the manual findings of the OpenMRS audit. Each test asserts the
+behaviour WCAG asks for and is marked as an expected failure, so it turns red when the bug is fixed.
+
 ## Why open-source targets
 
 Auditing open-source software with a public demo needs no permission from a company, allows the
@@ -30,4 +34,4 @@ upstream. All audits here are independent: they are not issued or endorsed by th
 
 ## Licence
 
-Code (`tools/`): [MIT](LICENSE). Reports and documentation: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Code (`tools/`, `audits/*/regression/`): [MIT](LICENSE). Reports and documentation: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
