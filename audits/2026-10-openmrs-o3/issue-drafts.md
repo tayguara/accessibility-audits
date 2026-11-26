@@ -83,12 +83,14 @@ a button inside a button.
 **Suggested fix:** render tags as non-interactive labels inside search results, or move the tags
 slot outside the link.
 
-## 7. Content clipped at 320 px; registration form unusable (WCAG 1.4.10)
+## 7. Content clipped at 320 px; registration form needs two-way scrolling (WCAG 1.4.10)
 
 **Components:** esm-patient-registration-app layout; patient chart header and vitals summary
 
-At 320 CSS px there is no horizontal scrollbar, but content is clipped. In registration the
-"Jump to" column and buttons do not stack, leaving the form too narrow to use. In the chart, header
+At 320 CSS px the page has no horizontal scrollbar, but content is clipped or needs two-way
+scrolling. In registration the "Jump to" column and buttons do not stack, and the squeezed form
+sits in a container that scrolls sideways and down with its scrollbar hidden
+(`scrollbar-width: none`). In the chart, header
 actions, the right column of the vitals summary and the last item of the bottom bar are cut, and
 summary values overlap.
 
